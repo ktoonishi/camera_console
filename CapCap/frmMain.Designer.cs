@@ -29,17 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnTest = new System.Windows.Forms.Button();
             this.pic = new System.Windows.Forms.PictureBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.tbSetting = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
             this.lblTimer = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbReso = new System.Windows.Forms.ComboBox();
             this.lblCapSize = new System.Windows.Forms.Label();
             this.gbIP = new System.Windows.Forms.GroupBox();
+            this.chkMirror = new System.Windows.Forms.CheckBox();
             this.cmbTimer = new System.Windows.Forms.ComboBox();
             this.cmbCam = new System.Windows.Forms.ComboBox();
             this.lblCap = new System.Windows.Forms.Label();
@@ -51,6 +54,7 @@
             this.rbtnSave_Other = new System.Windows.Forms.RadioButton();
             this.rbtnSave_Desktop = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSnumU = new System.Windows.Forms.NumericUpDown();
             this.txtSnumB = new System.Windows.Forms.NumericUpDown();
@@ -63,6 +67,7 @@
             this.cmbExt = new System.Windows.Forms.ComboBox();
             this.lblExt_Discription = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnLicenseOC3 = new System.Windows.Forms.Button();
             this.lblTimerCount = new System.Windows.Forms.Label();
             this.chkTimer = new System.Windows.Forms.CheckBox();
             this.btnCapture = new System.Windows.Forms.Button();
@@ -74,9 +79,6 @@
             this.sfdSaveFile = new System.Windows.Forms.SaveFileDialog();
             this.ofdSavePath = new System.Windows.Forms.OpenFileDialog();
             this.timClk1Sec = new System.Windows.Forms.Timer(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.chkMirror = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -95,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSnumU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSnumB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSnum)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.stb.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -195,6 +198,17 @@
             this.tabPage1.Text = "いろいろ";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label4.Location = new System.Drawing.Point(14, 200);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 76);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "手入力も可能\r\n定期的に撮るに\r\nチェックをいれると\r\nタイマー撮影";
+            // 
             // lblTimer
             // 
             this.lblTimer.AutoSize = true;
@@ -246,6 +260,16 @@
             this.gbIP.TabIndex = 2;
             this.gbIP.TabStop = false;
             this.gbIP.Text = "画像処理";
+            // 
+            // chkMirror
+            // 
+            this.chkMirror.AutoSize = true;
+            this.chkMirror.Location = new System.Drawing.Point(12, 28);
+            this.chkMirror.Name = "chkMirror";
+            this.chkMirror.Size = new System.Drawing.Size(147, 26);
+            this.chkMirror.TabIndex = 0;
+            this.chkMirror.Text = "画像を左右反転";
+            this.chkMirror.UseVisualStyleBackColor = true;
             // 
             // cmbTimer
             // 
@@ -391,6 +415,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ファイル名";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label5.Location = new System.Drawing.Point(8, 131);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(146, 19);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "* が連番に置換わる！";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -516,13 +551,24 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btnLicenseOC3);
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(222, 501);
+            this.tabPage3.Size = new System.Drawing.Size(216, 501);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Licence";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btnLicenseOC3
+            // 
+            this.btnLicenseOC3.Location = new System.Drawing.Point(6, 12);
+            this.btnLicenseOC3.Name = "btnLicenseOC3";
+            this.btnLicenseOC3.Size = new System.Drawing.Size(204, 72);
+            this.btnLicenseOC3.TabIndex = 0;
+            this.btnLicenseOC3.Text = "OpenCV3";
+            this.btnLicenseOC3.UseVisualStyleBackColor = true;
+            this.btnLicenseOC3.Click += new System.EventHandler(this.btnLicenseOC3_Click);
             // 
             // lblTimerCount
             // 
@@ -622,38 +668,6 @@
             this.timClk1Sec.Interval = 1000;
             this.timClk1Sec.Tick += new System.EventHandler(this.timClk1Sec_Tick);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(14, 200);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 57);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "手入力も可能だ！\r\n定期的に撮るにチェックをいれると\r\n勝手に撮影され続ける！";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label5.Location = new System.Drawing.Point(8, 131);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 19);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "* が連番に置換わる！";
-            // 
-            // chkMirror
-            // 
-            this.chkMirror.AutoSize = true;
-            this.chkMirror.Location = new System.Drawing.Point(12, 28);
-            this.chkMirror.Name = "chkMirror";
-            this.chkMirror.Size = new System.Drawing.Size(147, 26);
-            this.chkMirror.TabIndex = 0;
-            this.chkMirror.Text = "画像を左右反転";
-            this.chkMirror.UseVisualStyleBackColor = true;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -662,6 +676,7 @@
             this.Controls.Add(this.stb);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Meiryo UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.Text = "カメラコンソール";
@@ -692,6 +707,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSnumU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSnumB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSnum)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             this.stb.ResumeLayout(false);
             this.stb.PerformLayout();
             this.ResumeLayout(false);
@@ -749,6 +765,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox chkMirror;
+        private System.Windows.Forms.Button btnLicenseOC3;
     }
 }
 

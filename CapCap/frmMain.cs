@@ -463,11 +463,19 @@ namespace camera_console {
         }
 
         // ----------------------------------------------------------------------------------------
-        // フィル名テキストボックス変更後
+        // ファイル名テキストボックス変更後
         // ----------------------------------------------------------------------------------------
         private void txtName_TextChanged(object sender, EventArgs e) {
             // 無効な文字は削除する
 
+        }
+
+        private void btnLicenseOC3_Click(object sender, EventArgs e) {
+            try {
+                Process.Start(Application.StartupPath + "\\license\\OpenCV_License.txt");
+            }catch(Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

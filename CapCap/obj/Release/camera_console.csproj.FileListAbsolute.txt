@@ -23,3 +23,5 @@ C:\Users\oonis\OneDrive\VisualStudio\CSH\CapCap\CapCap\obj\Release\camera_consol
 C:\Users\oonis\OneDrive\VisualStudio\CSH\CapCap\CapCap\obj\Release\camera_console.csproj.CoreCompileInputs.cache
 C:\Users\oonis\OneDrive\VisualStudio\CSH\CapCap\CapCap\obj\Release\camera_console.exe
 C:\Users\oonis\OneDrive\VisualStudio\CSH\CapCap\CapCap\obj\Release\camera_console.pdb
+C:\Users\oonis\OneDrive\VisualStudio\CSH\CapCap\CapCap\obj\Release\camera_console.csprojResolveAssemblyReference.cache
+C:\Users\oonis\OneDrive\VisualStudio\CSH\CapCap\CapCap\bin\Release\license\OpenCV_License.txt
